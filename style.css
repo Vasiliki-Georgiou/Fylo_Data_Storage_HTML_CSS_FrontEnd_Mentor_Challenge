@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(229, 57%, 11%);
+    background: url(images/bg-mobile.png) no-repeat left;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    color: #fff;
+}
+
+.product, .storage-capacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 300px;
+    height: 200px;
+    background-color: hsl(228, 56%, 26%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product {
+    border-top-right-radius: 40%;
+}
+
+.product .icons {
+    display: flex;
+}
+
+.product .icons button {
+    background-color:hsl(229, 57%, 11%);
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+.storage-capacity {
+    margin-top: 16px;
+    color: hsl(243, 100%, 93%);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.storage-capacity strong:first-child,
+.storage-capacity .gigabytes {
+    font-weight: 700;
+}
+
+.storage-capacity .storage-bar {
+    width: 100%;
+    height: 12%;
+    border-radius: 8px;
+    background-color:hsl(229, 57%, 11%);
+}
+
+.storage-bar .capacity-left {
+    width: 70%;
+    height: 90%;
+    background-color: hsl(336, 89%, 64%, 1);
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 8px;
+    margin: 0.5px;
+    position: relative;
+}
+
+.capacity-left .radio-button {
+    background-color: #fff;
+    width: 10%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+}
+
+.gigabytes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gigabytes-bubble {
+    background-color: #fff;
+    width: 50%;
+    padding: 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -50%);
+}
+
+.gigabytes-bubble strong {
+    color:hsl(229, 57%, 11%);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.gigabytes-bubble span {
+    font-size: 10px;
+    color:hsl(229, 7%, 55%);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+@media(min-width: 1024px) {
+    body {
+        background: url(images/bg-desktop.png) no-repeat bottom;
+        background-size: 100%;
+        background-color: hsl(229, 57%, 11%);
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    section {
+        margin-left: 32px;
+    }
+
+    .storage-capacity {
+        width: 400px;
+        height: 150px;
+    }
+
+    .capacity-left .radio-button {
+        width: 6%;
+        height: 100%;
+    }
+
+    .gigabytes-bubble {
+        background-color: #fff;
+        width: 100%;
+        transform: translate(-150%, -250%);
+        border-bottom-right-radius: 0;
+    }
+
+    .gigabytes-bottom-left:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-right: 24px solid #fff;
+        border-left: 12px solid transparent;
+        border-top: 12px solid #fff;
+        border-bottom: 20px solid transparent;
+        right: 0.1px;
+        bottom: -15px;
+      }
+}
