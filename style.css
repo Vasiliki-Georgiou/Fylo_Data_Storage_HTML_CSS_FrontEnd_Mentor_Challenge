@@ -99,7 +99,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(50%, -50%);
+    transform: translate(50%, 480%);
 }
 
 .gigabytes-bubble strong {
@@ -117,7 +117,7 @@ body {
 
 @media(min-width: 1024px) {
     body {
-        background: url(images/bg-desktop.png) no-repeat bottom;
+        background: url(images/bg-desktop.png) no-repeat center bottom;
         background-size: 100%;
         background-color: hsl(229, 57%, 11%);
     }
@@ -126,10 +126,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: end;
-    }
-
-    section {
-        margin-left: 32px;
     }
 
     .storage-capacity {
@@ -145,7 +141,7 @@ body {
     .gigabytes-bubble {
         background-color: #fff;
         width: 100%;
-        transform: translate(-150%, -250%);
+        transform: translate(330%, -250%);
         border-bottom-right-radius: 0;
     }
 
@@ -160,5 +156,13 @@ body {
         border-bottom: 20px solid transparent;
         right: 0.1px;
         bottom: -15px;
+      }
+
+      @media(min-width: 1440px) {
+        body {
+            background: url(images/bg-desktop.png) no-repeat center bottom -50%;
+            background-size: 100%;
+            background-color: hsl(229, 57%, 11%);
+        }  
       }
 }
